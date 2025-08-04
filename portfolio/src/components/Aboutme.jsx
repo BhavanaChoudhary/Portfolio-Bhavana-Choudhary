@@ -41,7 +41,7 @@ const AboutMe = () => {
                 My adaptability shines through multiple <span className="neon-highlight">hackathon wins</span> and diverse projects from AI-powered forensic sketching, Food delivery Application, Doctor's Space, Industrial Management and ongoing works in AR/VR. My NGO web design served as open-source contribution creating real-world impact.
               </p>
               <p>
-                Beyond coding, I possess strong <span className="neon-highlight">soft skills</span> - effective communication, collaborative problem-solving, and leadership honed through team projects.
+                Beyond coding, I possess strong <span className="neon-highlight">soft skills</span> – effective communication, collaborative problem-solving, and leadership honed through team projects.
               </p>
               <p className="neon-footnote">
                 [When not coding: design × dance × books × tech exploration]
@@ -53,7 +53,7 @@ const AboutMe = () => {
 
       <style jsx>{`
         @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Share+Tech+Mono&display=swap');
-        
+
         .about-page {
           position: relative;
           width: 100%;
@@ -65,8 +65,8 @@ const AboutMe = () => {
           min-height: 100vh;
           display: flex;
           align-items: center;
-          padding-top: 80px;
-          padding-left: 80px;
+          justify-content: center;
+          padding: 80px 30px 40px 30px;
         }
 
         .about-container::before {
@@ -84,24 +84,27 @@ const AboutMe = () => {
           position: relative;
           z-index: 2;
           display: flex;
-          width: 100%;
-          padding: 0 5%;
-          box-sizing: border-box;
+          flex-wrap: wrap;
+          gap: 40px;
+          justify-content: center;
           align-items: center;
+          max-width: 1200px;
+          width: 100%;
+          padding: 0 40px;
         }
 
         .model-container {
-          flex: 1;
+          flex: 1 1 350px;
           height: 70vh;
+          max-width: 500px;
           min-width: 300px;
-          position: relative;
-          z-index: 2;
         }
 
         .text-content {
-          flex: 1;
-          padding-left: 40px;
-          max-width: 60%;
+          flex: 1 1 350px;
+          max-width: 600px;
+          padding: 40px;
+          color: #fff;
         }
 
         h1 {
@@ -151,46 +154,54 @@ const AboutMe = () => {
 
         @media (max-width: 1024px) {
           .about-container {
-            padding-left: 20px;
-            padding-top: 60px;
+            padding: 60px 20px 30px 20px;
           }
+
           .content {
-            padding: 0 10px;
+            padding: 0 20px;
           }
+
           h1 {
             font-size: 2.4rem;
           }
+
           .cyber-text {
             font-size: 0.95rem;
+          }
+
+          .model-container {
+            height: 60vh;
           }
         }
 
         @media (max-width: 768px) {
           .about-container {
             flex-direction: column;
-            padding-left: 0;
-            padding-top: 40px;
-            padding-bottom: 30px;
+            padding: 40px 10px 30px 10px;
           }
+
           .content {
             flex-direction: column;
             text-align: center;
             padding: 0 10px;
           }
+
           .model-container {
             width: 100%;
-            height: 40vh;
+            height: 45vh;
             min-width: unset;
             margin-bottom: 20px;
           }
+
           .text-content {
             max-width: 100%;
-            padding-left: 0;
-            margin-bottom: 0;
+            padding: 20px;
           }
+
           h1 {
             font-size: 2rem;
           }
+
           .cyber-text {
             font-size: 0.9rem;
           }
@@ -200,14 +211,21 @@ const AboutMe = () => {
           .about-container {
             padding-top: 30px;
           }
+
           .model-container {
-            height: 50vh;
+            height: 40vh;
           }
+
           h1 {
             font-size: 1.6rem;
           }
+
           .cyber-text {
             font-size: 0.85rem;
+          }
+
+          .text-content {
+            padding: 15px;
           }
         }
       `}</style>
