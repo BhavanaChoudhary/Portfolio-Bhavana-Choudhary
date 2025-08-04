@@ -183,7 +183,8 @@ const AboutMe = () => {
 
           .model-container {
   width: 100%;
-  height: 50vh;
+  height: 60vh;
+  
   min-width: unset;
   margin-bottom: 20px;
   display: flex;
