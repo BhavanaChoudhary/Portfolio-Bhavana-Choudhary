@@ -7,7 +7,7 @@ const OverlayBar = styled.div`
   top: 20px;
   left: 25%;
   right: 25%;
-  height: 35px;
+  height: 45px;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
