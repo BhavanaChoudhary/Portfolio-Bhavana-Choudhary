@@ -4,7 +4,7 @@
 .achievements-container {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 70vh;
   overflow: hidden;
   font-family: 'Share Tech Mono', monospace;
 }
@@ -66,6 +66,7 @@
 /* Carousel */
 .carousel-container {
   width: 500px;
+  height: 650px;
   background: rgba(10, 15, 30, 0.35);
   backdrop-filter: blur(2px);
   border-radius: 16px;
