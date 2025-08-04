@@ -1,0 +1,52 @@
+.cyber-home-btn {
+  position: fixed;
+  top: 18px;
+  left: 28px;
+  z-index: 1001;
+  background: #06202a;         /* dark cyan-black background */
+  color: #00eaff;
+  border: none;
+  border-radius: 6px;
+  padding: 7px 16px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px #00eaff80;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+
+.cyber-home-btn:hover,
+.cyber-home-btn:focus {
+  background: #0a2233;
+  color: #00eaff;
+  box-shadow: 0 0 16px 4px #00eaffcc;
+}
+
+.cyber-home-icon {
+  font-size: 1.3em;
+  margin-right: 6px;
+  filter: drop-shadow(0 0 4px #00eaff);
+}
+
+/* Adjust positioning for smaller screens to avoid overlap with TopBar */
+@media (max-width: 768px) {
+  .cyber-home-btn {
+    top: 60px; /* Move below TopBar (30px height + 20px top offset + 10px spacing) */
+    left: 15px;
+    padding: 5px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyber-home-btn {
+    top: 70px; /* Move further down to account for taller TopBar on small screens */
+    left: 10px;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+  }
+}

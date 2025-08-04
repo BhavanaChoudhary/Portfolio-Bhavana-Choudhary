@@ -1,0 +1,127 @@
+/* Import a better hacker font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+body {
+  background: #0a0a0a;
+  color: #00fff7;
+  font-family: 'Orbitron', monospace;
+}
+
+.futuristic-text {
+  text-align: center;
+  color: #0a0a0a;
+  font-family: 'Orbitron', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  text-shadow:
+    0 0 5px #00fff7,
+    0 0 10px #00fff7,
+    0 0 20px #00fff7,
+    0 0 40px #00fff7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  user-select: none;
+  z-index: 10;
+  animation: flicker 2s infinite alternate;
+}
+
+.futuristic-text h1 {
+  font-size: 2.5rem;   /* 🔽 Reduced from 3.8rem */
+  margin: 0;
+  letter-spacing: 0.2em;
+  white-space: nowrap; /* ✅ keeps it in one line */
+}
+
+.futuristic-text p {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+/* Flicker effect for coder vibe */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 0 4px #00fff7,
+      0 0 11px #00fff7,
+      0 0 19px #00fff7,
+      0 0 40px #00fff7;
+  }
+  20%, 24%, 55% {
+    opacity: 0.6;
+    text-shadow: none;
+  }
+}
+
+/* Blinking cursor underscore */
+.futuristic-text h1::after {
+  content: "_";
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Canvas styling for model */
+.model-canvas {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Responsive styles for name and model */
+
+/* Small devices (phones, less than 600px) */
+@media (max-width: 599px) {
+  .futuristic-text h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    white-space: normal; /* allow wrapping */
+  }
+  .futuristic-text p {
+    font-size: 1rem;
+  }
+  .model-canvas {
+    height: 50vh;
+    width: 100vw;
+  }
+}
+
+/* Medium devices (tablets, 600px to 899px) */
+@media (min-width: 600px) and (max-width: 899px) {
+  .futuristic-text h1 {
+    font-size: 2rem;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+  }
+  .futuristic-text p {
+    font-size: 1.1rem;
+  }
+  .model-canvas {
+    height: 70vh;
+    width: 100vw;
+  }
+}
+
+/* Large devices (desktops, 900px and up) */
+@media (min-width: 900px) {
+  .futuristic-text h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.2em;
+    white-space: nowrap;
+  }
+  .futuristic-text p {
+    font-size: 1.2rem;
+  }
+  .model-canvas {
+    height: 100vh;
+    width: 100vw;
+  }
+}

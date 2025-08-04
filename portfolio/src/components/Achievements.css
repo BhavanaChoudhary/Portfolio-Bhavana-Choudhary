@@ -1,0 +1,287 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Share+Tech+Mono&display=swap');
+
+/* Base Styles */
+.achievements-container {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  overflow: hidden;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.space-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('/assets/space-background.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+  filter: brightness(0.7);
+}
+
+/* Main Content */
+.achievements-main-content {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  z-index: 10;
+}
+
+/* Floating Image */
+.floating-image-container {
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+  margin: 0 2rem;
+  position: relative;
+}
+
+.floating-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(100, 149, 237, 0.7));
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.glow-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, 
+              rgba(100, 149, 237, 0.4) 0%, 
+              transparent 70%);
+  animation: pulse 4s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+/* Carousel */
+.carousel-container {
+  width: 500px;
+  background: rgba(10, 15, 30, 0.35);
+  backdrop-filter: blur(2px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 1px solid rgba(100, 149, 237, 0.25);
+  box-shadow: 0 0 40px rgba(100, 149, 237, 0.15);
+}
+
+.carousel-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.carousel-header h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: 'Major Mono Display', monospace;
+  text-shadow: 0 0 10px rgba(100, 149, 237, 0.5);
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, 
+              transparent, 
+              rgba(100, 149, 237, 0.6), 
+              transparent);
+  margin: 0 auto;
+  width: 60%;
+}
+
+.carousel-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.carousel-nav {
+  background: transparent;
+  border: 1px solid rgba(100, 149, 237, 0.3);
+  color: rgba(100, 149, 237, 0.8);
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+}
+
+.carousel-nav:hover {
+  color: #fff;
+  border-color: rgba(100, 149, 237, 0.8);
+  background: rgba(100, 149, 237, 0.2);
+  transform: scale(1.1);
+}
+
+.carousel-slide {
+  flex: 1;
+  text-align: center;
+  padding: 0 1.5rem;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.achievement-title {
+  font-size: 1.5rem;
+  color: #6495ED;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: 'Major Mono Display', monospace;
+}
+
+.achievement-year {
+  font-size: 0.9rem;
+  color: rgba(200, 220, 255, 0.7);
+  margin-bottom: 1.2rem;
+  font-weight: 300;
+}
+
+.achievement-description {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+  font-weight: 300;
+}
+
+/* Fixed iframe display */
+.certificate-preview {
+  width: 100%;
+  height: 220px;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.certificate-wrapper {
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(100, 149, 237, 0.3);
+}
+
+.certificate-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
+}
+
+/* Dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(100, 149, 237, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #6495ED;
+  transform: scale(1.3);
+  box-shadow: 0 0 10px rgba(100, 149, 237, 0.7);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotateY(10deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+.floating-image:hover {
+  transform: scale(1.1) rotateY(20deg);
+  filter: drop-shadow(0 0 30px rgba(100, 149, 237, 0.9));
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .achievements-main-content {
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 5rem;
+  }
+  
+  .floating-image-container {
+    width: 320px;
+    height: 320px;
+  }
+  
+  .carousel-container {
+    width: 90%;
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-image-container {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .carousel-container {
+    padding: 1.8rem;
+  }
+  
+  .carousel-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .achievement-title {
+    font-size: 1.3rem;
+  }
+  
+  .certificate-preview {
+    height: 180px;
+  }
+}
