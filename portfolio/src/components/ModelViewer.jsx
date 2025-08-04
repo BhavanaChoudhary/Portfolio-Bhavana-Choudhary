@@ -7,7 +7,7 @@ import TopBar from './TopBar'
 import SideBar from './SideBar'
 import HomeButton from './Home'
 function Model() {
-  const gltf = useGLTF('/src/assets/mainmodel.glb')
+  const gltf = useGLTF('/assets/mainmodel.glb')
   return <primitive object={gltf.scene} dispose={null} scale={2} />
 }
 
