@@ -61,13 +61,14 @@ const AboutMe = () => {
         }
 
         .about-container {
-          position: relative;
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 80px 30px 40px 30px;
-        }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 80px 30px 60px 30px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
 
         .about-container::before {
           content: '';
@@ -81,24 +82,29 @@ const AboutMe = () => {
         }
 
         .content {
-          position: relative;
-          z-index: 2;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 40px;
-          justify-content: center;
-          align-items: center;
-          max-width: 1200px;
-          width: 100%;
-          padding: 0 40px;
-        }
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  gap: 40px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
 
         .model-container {
-          flex: 1 1 350px;
-          height: 70vh;
-          max-width: 500px;
-          min-width: 300px;
-        }
+  flex: 1 1 350px;
+  height: 60vh;
+  max-width: 500px;
+  min-width: 300px;
+  overflow: hidden;
+}
+
 
         .text-content {
           flex: 1 1 350px;
