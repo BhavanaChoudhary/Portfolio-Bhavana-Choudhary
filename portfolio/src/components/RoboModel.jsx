@@ -5,15 +5,15 @@ export default function RoboModel(props) {
   const { scene } = useGLTF('/assets/robo.glb');
 
   // Responsive scale based on screen width
-  let scale = 5.5;
+  let scale = 6;
   if (window.innerWidth <= 480) {
-    scale = 3.2;
+    scale = 3;
   } else if (window.innerWidth <= 768 && window.innerWidth > 380) {
-    scale = 4;
-  } else if (window.innerWidth <= 768) {
-    scale = 4.2;
+    scale = 3.5;
+  }else if (window.innerWidth <= 768) {
+    scale = 3.8;
   } else if (window.innerWidth <= 1024) {
-    scale = 5;
+    scale = 4.5;
   }
 
   useEffect(() => {
@@ -22,6 +22,7 @@ export default function RoboModel(props) {
         child.castShadow = true;
         child.receiveShadow = true;
 
+        // Make the robot much brighter
         if (child.material) {
           child.material.emissiveIntensity = 5;
           child.material.metalness = 0.7;
@@ -31,6 +32,7 @@ export default function RoboModel(props) {
     });
   }, [scene]);
 
-  // Slightly lifted position
-  return <primitive object={scene} {...props} scale={scale} position={[0, -0.3, 0]} />;
+  // Responsive scale and position
+  return <primitive object={scene} {...props} scale={scale} position={[0, 0, 0]} />;
 }
+

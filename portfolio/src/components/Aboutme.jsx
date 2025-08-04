@@ -55,20 +55,19 @@ const AboutMe = () => {
         @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Share+Tech+Mono&display=swap');
 
         .about-page {
-          position: fixed;
+          position: relative;
           width: 100%;
           min-height: 100vh;
         }
 
         .about-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  padding: 80px 30px 60px 30px;
-  flex-wrap: wrap;
-  overflow: hidden;
-}
-
+          position: relative;
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 80px 30px 40px 30px;
+        }
 
         .about-container::before {
           content: '';
@@ -82,29 +81,24 @@ const AboutMe = () => {
         }
 
         .content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-  gap: 40px;
-  padding: 20px 40px;
-  box-sizing: border-box;
-}
-
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 40px;
+          justify-content: center;
+          align-items: center;
+          max-width: 1200px;
+          width: 100%;
+          padding: 0 40px;
+        }
 
         .model-container {
-  flex: 1 1 350px;
-  height: 60vh;
-  max-width: 500px;
-  min-width: 300px;
-  overflow: hidden;
-}
-
+          flex: 1 1 350px;
+          height: 70vh;
+          max-width: 500px;
+          min-width: 300px;
+        }
 
         .text-content {
           flex: 1 1 350px;
@@ -214,26 +208,33 @@ const AboutMe = () => {
         }
 
         @media (max-width: 480px) {
-          .about-container {
-            padding-top: 30px;
-          }
-
-          .model-container {
-            height: 40vh;
-          }
-
-          h1 {
-            font-size: 1.6rem;
-          }
-
-          .cyber-text {
-            font-size: 0.85rem;
-          }
-
-          .text-content {
-            padding: 15px;
-          }
-        }
+    h1 {
+      font-size: 1.5rem;
+    }
+    .cyber-text {
+      font-size: 0.85rem;
+    }
+    .model-container {
+      height: 40vh;
+    }
+    .text-content {
+      padding: 10px;
+    }
+  }
+    @media (max-width: 768px) {
+    .about-container {
+      padding: 60px 10px 30px 10px;
+    }
+    h1 {
+      font-size: 1.8rem;
+    }
+    .cyber-text {
+      font-size: 0.9rem;
+    }
+    .model-container {
+      height: 45vh;
+    }
+  }
       `}</style>
     </div>
   );
