@@ -178,11 +178,15 @@ const AboutMe = () => {
             padding: 0 10px;
           }
           .model-container {
-            width: 100%;
-            height: 40vh;
-            min-width: unset;
-            margin-bottom: 20px;
-          }
+  width: 100%;
+  height: 50vh;
+  min-width: unset;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
           .text-content {
             max-width: 100%;
             padding-left: 0;

@@ -4,16 +4,20 @@ import { useGLTF } from '@react-three/drei';
 export default function RoboModel(props) {
   const { scene } = useGLTF('/assets/robo.glb');
 
-  // Responsive scale based on screen width
   let scale = 5;
-  if (window.innerWidth <= 480) {
-    scale = 2.8;
-  } else if (window.innerWidth <= 768 && window.innerWidth > 380) {
-    scale = 3.0;
-  }else if (window.innerWidth <= 768) {
-    scale = 3.5;
-  } else if (window.innerWidth <= 1024) {
+  let position = [0, 0, 0];
+
+  const width = window.innerWidth;
+
+  if (width <= 480) {
     scale = 4.2;
+    position = [0, -1.2, 0];
+  } else if (width <= 768) {
+    scale = 4.5;
+    position = [0, -1.4, 0];
+  } else if (width <= 1024) {
+    scale = 4.8;
+    position = [0, -1.6, 0];
   }
 
   useEffect(() => {
@@ -22,7 +26,6 @@ export default function RoboModel(props) {
         child.castShadow = true;
         child.receiveShadow = true;
 
-        // Make the robot much brighter
         if (child.material) {
           child.material.emissiveIntensity = 5;
           child.material.metalness = 0.7;
@@ -32,7 +35,5 @@ export default function RoboModel(props) {
     });
   }, [scene]);
 
-  // Responsive scale and position
-  return <primitive object={scene} {...props} scale={scale} position={[0, 0, 0]} />;
+  return <primitive object={scene} {...props} scale={scale} position={position} />;
 }
-
