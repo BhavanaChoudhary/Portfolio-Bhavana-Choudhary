@@ -198,10 +198,10 @@ const AboutMe = () => {
 
         @media (max-width: 480px) {
           .about-container {
-            padding-top: 20px;
+            padding-top: 30px;
           }
           .model-container {
-            height: 30vh;
+            height: 50vh;
           }
           h1 {
             font-size: 1.6rem;
