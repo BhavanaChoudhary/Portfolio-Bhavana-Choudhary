@@ -55,7 +55,7 @@ const AboutMe = () => {
         @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Share+Tech+Mono&display=swap');
 
         .about-page {
-          position: relative;
+          position: fixed;
           width: 100%;
           min-height: 100vh;
         }
