@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import './Skills.css';
+import './skills.css';
 import videoSrc from '../assets/video.mp4';
 import HomeButton from './Home';
 import TopBar from './TopBar';
