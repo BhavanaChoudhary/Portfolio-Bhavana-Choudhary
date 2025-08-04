@@ -173,10 +173,14 @@ const AboutMe = () => {
             padding-bottom: 30px;
           }
           .content {
-            flex-direction: column;
-            text-align: center;
-            padding: 0 10px;
-          }
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 10px 0 60px; /* ⬅ Adds left gap to avoid sidebar */
+  box-sizing: border-box;
+}
+
           .model-container {
   width: 100%;
   height: 50vh;
