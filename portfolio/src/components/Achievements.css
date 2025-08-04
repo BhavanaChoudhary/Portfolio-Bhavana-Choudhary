@@ -65,7 +65,8 @@
 
 /* Carousel */
 .carousel-container {
-  width: 600px;
+  left: 40px;
+  width:600px;
   height: 650px;
   background: rgba(10, 15, 30, 0.35);
   backdrop-filter: blur(2px);
