@@ -20,7 +20,7 @@ const OverlayBar = styled.div`
   gap: 20px;
 
   @media (max-width: 768px) {
-    height: 30px;
+    height: 40px;
     gap: 12px;
     left: 10px;
     right: 10px;
