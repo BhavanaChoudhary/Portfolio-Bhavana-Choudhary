@@ -65,7 +65,7 @@ export default function TopBar() {
       <Link href="/skills">Skills</Link>
       <Link href="/projects">Projects</Link>
       <Link href="/achievements">Achievements</Link>
-      {/* <Link href="/otherworks">Other Works</Link> */}
+      <Link href="/otherworks">Other Works</Link>
     </OverlayBar>
   )
 }
