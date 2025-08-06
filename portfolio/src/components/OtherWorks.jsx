@@ -7,6 +7,7 @@ import WorkModel from './WorkModel';
 import building2 from '../assets/backgroundproject.jpg';
 import TopBar from './TopBar';
 import SideBar from './SideBar';
+import HomeButton from './Home';
 
 const Container = styled.div`
   width: 100%;
@@ -250,6 +251,7 @@ const OtherWorks = () => {
     <Container>
       <TopBar/>
       <SideBar/>
+      <HomeButton/>
       <BackgroundImage />
       <CanvasContainer>
         <Canvas
